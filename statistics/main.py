@@ -1,17 +1,10 @@
-from covariance import covariance
-from standard_deviation import standard_deviation
-from correlation_coefficient import correlation_coefficient
-from weighted_mean import weighted_mean
-from grouped_data import grouped_mean, grouped_standard_deviation
+from tendencies import tendencies
 
 
-x = [3.55, 4.01, 3.05, 5.35, 4.22, 6.12, 7.45, 5.95, 6.35, 6.98]
-y = [51, 54, 50, 60, 52, 61, 63, 59, 68, 74]
 
-#print(covariance(x, y))
-#print(standard_deviation(x))
-print(correlation_coefficient(x, y))
-#print(weighted_mean(x, y))
-#print(grouped_mean(x, y), grouped_standard_deviation(x, y))
+x = [1, 2, 3, 4,5]
+y = [0.136, 0.159, 0.248, 0.202, 0.255]
 
-#print(sum(x) / len(x), len(x))
+result = tendencies(x, sample=True)
+for key, value in result.items():
+    print(f"{key}: {value}")
